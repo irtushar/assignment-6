@@ -5,38 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Green Earth</title>
 
-    <!-- google font  -->
+    <!-- font awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- font integration  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
 
-    <!-- daisyui and tailwind cnd -->
+    <!-- tailwind+daisyui  -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
       type="text/css"
     />
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <!-- font awesome cdn  -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
-    <!-- stylesheet link  -->
-    <link rel="stylesheet" href="./style.css" />
+    <!-- stylesheet  -->
+    <link rel="stylesheet" href="style/style.css" />
   </head>
 
   <body class="bg-[#e7ffef] inter-font">
     <header>
-      <!-- Navbar Section -->
+      <!-- Navbar -->
       <nav class="bg-[#15803D]">
         <div class="navbar md:w-11/12 md:mx-auto">
           <div class="navbar-start">
@@ -97,7 +98,7 @@
           </div>
         </div>
       </nav>
-      <!-- Plant Section -->
+      <!-- Plant a Tree -->
       <section
         class="bg-[#CFF0DC] bg-[url('./assets/hero-leaf1.png'),url('./assets/hero-leaf2.png')] bg-[position:left_bottom,right_bottom] bg-no-repeat bg-[length:115px,115px] md:bg-[length:400px,400px] text-center md:py-20 py-8"
       >
@@ -107,12 +108,34 @@
           for future generations.
         </p>
         <a
-          class="btn bg-[#FACC15] text-[#15803D] rounded-full border-none shadow-none hover:bg-[#e7bc0f]"
+          class="btn bg-[#FACC15] rounded-full text-[#15803D] border-none shadow-none hover:bg-[#e7bc0f]"
           >Get Involved</a
         >
       </section>
     </header>
-    <!-- Footer Section -->
+    <!-- Choose Your Trees -->
+    <main class="mt-10">
+      <h2 class="text-xl font-semibold text-center">Choose Your Trees</h2>
+      <h1 id="loadspeen" class="text-center mt-5 hidden">
+        <span class="loading loading-dots loading-xl"></span>
+      </h1>
+      <section class="w-11/12 mx-auto grid md:grid-cols-12 gap-4 my-4">
+        <aside class="md:col-span-2">
+          <h3 class="font-bold my-3 pl-2">Categories</h3>
+          <div id="Categories-container"></div>
+        </aside>
+        <div
+          id="card-container"
+          class="md:col-span-8 grid md:grid-cols-3 gap-4"
+        ></div>
+        <aside class="md:col-span-2 bg-white rounded-lg p-2">
+          <h2 class="text-base font-semibold">Your Cart</h2>
+
+          <div id="add-to-cart-container"></div>
+        </aside>
+      </section>
+    </main>
+    <!-- Footer -->
     <footer
       class="footer sm:footer-horizontal footer-center bg-base-300 bg-[#14532D] text-base-content p-4 text-white"
     >

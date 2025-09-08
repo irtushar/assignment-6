@@ -1,6 +1,9 @@
 # assignment-6
 
 
+
+Live Link: https://irtushar.github.io/assignment-6/
+
 1) What is the difference between var, let, and const?
 var is function-scoped, can be used before declaration, and can be reassigned.
 let is block-scoped, cannot be used before declaration, but can be reassigned.
